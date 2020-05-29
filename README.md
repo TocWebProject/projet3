@@ -25,8 +25,8 @@
   <li>Il y a une seule classe par fichier</li>
 </ul>
 
-<p>Homepage Screenshot</p>
+<p>Homepage Carousel Screenshot</p>
 <img src="img/screenshot-homepage-carousel.png" style="width: 50%">
 
-<p>Dashboard Screenshot</p>
+<p>Map & Reservation Screenshot</p>
 <img src="img/screenshot-map-reservation.png" style="width: 50%">
