@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+	<head>
+		<!-- Primary Meta -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Page Title -->
+		<title>Le Vélo Nantais - Location de Vélo en ligne</title>
+
+		<!-- Canonical & Favicon -->	
+		<link rel="canonical" href="https://tocwebproject.fr">
+		<link rel="icon" type="image/png" href="img/favicon.png"/>
+
+		<!-- Secondary Meta -->
+		<meta name="description" content="Vous voulez rapidement louer un vélo à Nantes ? Notre Carte Intéractive de Location de vélo est la pour vous guider ! ">
+		<meta name="author"      content="Yann">
+		
+		 <!-- Open Graph -->
+		 <meta property="og:type"        content="website">
+		 <meta property="og:title"       content="Velo Nantais">
+		 <meta property="og:url"         content="https://tocwebproject.fr">
+		 <meta property="og:description" content="Velo Nantais: Vous voulez rapidement louer un vélo à Nantes ? Notre Carte Intéractive de Location de vélo est la pour vous guider !">
+		 <meta property="og:image"       content="https://tocwebproject.fr/img/logo_orange_bike.png">
+ 
+		 <!-- Twitter Card -->
+		 <meta name="twitter:card"        content="summary">
+		 <meta name="twitter:title"       content="Velo Nantais">
+		 <meta name="twitter:site"        content="https://webagency.philippebeck.net">
+		 <meta name="twitter:description" content="WebAgency : Vous voulez rapidement louer un vélo à Nantes ? Notre Carte Intéractive de Location de vélo est la pour vous guider !">
+		 <meta name="twitter:image"       content="https://tocwebproject.fr/img/logo_orange_bike.png">
+		 <meta name="twitter:creator"     content="@yann">
+ 
+		<!-- Stylesheets -->	
+		<link rel="stylesheet" href="css/style.css"/>
+		<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+		
+		<!-- Css Leaflet map-->
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+	</head>
+	<body>
+		<!-- Section 1 - Logo et Titre -->
+		<section class="header_section1">
+			<div class="header">
+				<figure class="logo">
+					<img src="img/logo_orange_bike.png" alt="logo_velo_nantais"/>	
+				</figure>
+				<h1>Le Vélo Nantais</h1>
+			</div>
+			<hr>
+		</section>
+		<!-- Section 2 - Carousel Explication Logique Application -->
+		<section class="carousel_section2">
+			<h2>Comment réserver un Vélo ?</h2>
+			<div class="carousel-container">
+				<button id="prevBtn">
+					<i class="fas fa-arrow-left"></i>
+				</button>
+				<button id="nextBtn">
+					<i class="fas fa-arrow-right"></i>
+				</button>
+				<div class="carousel-slide">
+					<figure id="lastclone">
+						<picture>
+							<source media="(max-width: 465px)" srcset="img/slider/5-slider-small.jpg">
+							<source media="(max-width: 723px)" srcset="img/slider/5-slider-medium.jpg">
+							<img src="img/slider/5-slider.jpg" alt="diaporama presentation - Bravo reservation en cours">
+						</picture>
+						<figcaption>
+							<p>Bravo votre réservation est confirmée !</p>
+					 	</figcaption>
+					</figure>
+					<figure>
+						<picture>
+							<source media="(max-width: 465px)" srcset="img/slider/1-slider-small.jpg">
+							<source media="(max-width: 723px)" srcset="img/slider/1-slider-medium.jpg">
+							<img src="img/slider/1-slider.jpg" alt="diaporama presentation - Choississez une station">
+						</picture>
+						<figcaption> 
+							<p>Choisissez de la station</p>
+							<img id="screenMarker" src="img/screenshot-marker-levelonantais.png" alt="capture d'écran de la carte et d'un marqueur à selectionner">
+						</figcaption>
+					</figure>
+					<figure>
+						<picture>
+							<source media="(max-width: 465px)" srcset="img/slider/2-slider-small.jpg">
+							<source media="(max-width: 723px)" srcset="img/slider/2-slider-medium.jpg">
+							<img src="img/slider/2-slider.jpg" alt="diaporama presentation - Donnez vos informations personnels">
+						</picture>
+						<figcaption>
+							<p>Renseignez votre nom et votre prénom</p>
+							<img id="screenNom" src="img/screenshot-nom-prenom-levelonantais.png" alt="capture d'écran du formulaire Nom et Prenom">
+						</figcaption>
+					</figure>
+					<figure>
+						<picture>
+							<source media="(max-width: 465px)" srcset="img/slider/3-slider-small.jpg">
+							<source media="(max-width: 723px)" srcset="img/slider/3-slider-medium.jpg">
+							<img src="img/slider/3-slider.jpg" alt="diaporama presentation - Donnez votre signature">
+						</picture>
+						<figcaption>
+							<p>Déposez votre signature</p>
+							<img id="screenSignature" src="img/screenshot-signature-levelonantais.png" alt="capture d'écran de l'encart pour la signature">
+						</figcaption>
+					</figure>
+					<figure>
+						<picture>
+							<source media="(max-width: 465px)" srcset="img/slider/4-slider-small.jpg">
+							<source media="(max-width: 723px)" srcset="img/slider/4-slider-medium.jpg">
+							<img src="img/slider/4-slider.jpg" alt="diaporama presentation - Confirmez votre réservation">
+						</picture>
+						<figcaption>
+							<p>Confirmez votre réservation</p>
+							<img id="screenReserver" src="img/screenshot-reserver-levelonantais.png" alt="capture d'écran bouton réserver">
+						</figcaption>
+					</figure>
+					<figure>
+						<picture>
+							<source media="(max-width: 465px)" srcset="img/slider/5-slider-small.jpg">
+							<source media="(max-width: 723px)" srcset="img/slider/5-slider-medium.jpg">
+							<img src="img/slider/5-slider.jpg" alt="diaporama presentation - Bravo reservation en cours">
+						</picture>
+						<figcaption>
+							<p>Bravo votre réservation est confirmée !</p>
+							<img id="screenReservation" src="img/screenshot-reservation-levelonantais.png" alt="capture d'écran des informations de reservation">
+					 	</figcaption>
+					</figure>
+					<figure id="firstclone">
+						<picture>
+							<source media="(max-width: 465px)" srcset="img/slider/1-slider-small.jpg">
+							<source media="(max-width: 723px)" srcset="img/slider/1-slider-medium.jpg">
+							<img src="img/slider/1-slider.jpg" alt="diaporama presentation - Choississez uen station">
+						</picture>
+						<figcaption> 
+							<p>Choisissez votre station</p>
+						</figcaption>
+					</figure>
+				</div>
+				<div class="pauseNavigation">
+					<button class="controls" id="pauseBtn">Pause</button>
+				</div>
+			</div>
+		</section>
+		<!-- Section 3 - Slogan  -->
+		<section class="slogan_section3">
+			<hr>
+			<div class="slogan">
+				<h2>Bienvenue chez Le <strong>Vélo Nantais</strong> !</h2>
+				<p>"Loues un vélo en quelques clics et déplaces toi dans Nantes!"</p>
+			</div>
+			<div class="arrowDown_slogan">
+				<a href="#section4"><i class="fas fa-arrow-circle-down"></i></a>
+			</div>	
+			<hr>
+			<div class="mapicon_slogan">
+				<i class="fas fa-map-marked-alt"></i>
+			</div>
+			<p id="instruction">Veuillez choisir une station.</p>
+		</section>
+		<!-- Section 4 - Carte et Bloc Réservation -->
+		<section class="section4" id="section4">
+			<h3>Réservation</h3>
+			<!-- Map -->
+			<div id="map_container">	
+			</div>
+			<!-- Détails station selectionnée -->
+			<div id="station_detail_container">
+				<p id="titre_station_detail">Détails de la station</p>
+				<p id="adress">Adresse : <span id="adressItem"></span></p>
+				<p id="textAvailableBikeStands">Nombre de places : <span id="availableBikeStands"></span></p>
+				<p id="textAvailableBikes">Vélos Disponibles : <span id="availableBikes"></span></p>
+				<!-- Formulaire -->
+				<div id="formulaire"> 
+					<form action="URL" method="POST" id="getForm">
+						<div class="form">
+							<label for="inputName">Nom: </label>
+							<input type="text" name="name" id="inputName" required>
+						</div>
+						<div class="form">
+							<label for="inputFirstName">Prénom: </label>
+							<input type="text" name="firstName" id="inputFirstName" required>
+						</div>
+						<div class="form"> 	 	
+						  	<input id="submit" type="submit" value="Réserver">
+						</div>
+					</form>	 
+				</div> 
+				<!-- Signature API Canvas -->
+				<p id="signature">Signature:</p>
+				<div id="containerCanvas"> 
+					<canvas id="canvas">
+						Désolé, votre navigateur ne prend pas en charge &lt;canvas&gt;.
+					</canvas>
+				</div>
+			</div>
+		</section>	
+		<!-- Section 5 - Information sur la réservation en cours et Timer -->
+		<section class="section5">
+		<h4>Informations sur la réservation en cours</h4>
+		<div id="inforesa_container">
+			<p>
+				Vélo réservé à la station: <span id="adressReservationItem"></span> par <span id="firstNameResaItem"></span> <span id="nameReservationItem"></span>  
+			</p>
+			<hr id="hr_inforesa">
+			<p id="textReservation">
+				Votre Réservation s'arrêtera dans: <span id="minutes">20</span> min <span id="secondes">00</span> sec
+			</p>
+		</div>
+		<figure id="logo_inforesa">
+			<img src="img/logo_orange_bike.png" alt="logo_velo_nantais"/>	
+		</figure>
+		</section>
+		<!-- Décoration de l'arrière plan sur toute la page -->
+		<div class="background_style"></div>
+
+		<!-- Fichiers JavaScript-->
+		<!-- Fontawesome -->
+		<script src="https://kit.fontawesome.com/cd65077691.js" crossorigin="anonymous"></script> 
+		<!-- Leaflet Map -->
+		<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin=""></script>
+		<!-- Class - Navigation Carousel Img-->
+		<script src="js/Slide.js"></script>
+		<!--  Class -  Formulaire de Réservation-->
+		<script src="js/Canvas.js"></script>  
+		<script src="js/Reservation.js"></script> 
+		<!--  Class - Initialisation de la Map & Protocole Ajax-->	
+		<script src="js/Map.js"></script>  
+		<!-- Scroll bas de page #ancre -->
+		<script src="js/smoothscroolancor.js"></script>  
+		<!--  MAIN -->  
+		<script src="js/main.js"></script>	
+	</body>
+</html>
+
+

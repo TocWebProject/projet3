@@ -1,0 +1,667 @@
+/* CSS Velo Nantais P3 | https://tocwebproject.fr | Auteur: Yann */
+
+/* ================== Body & Style arrière plan ================== */
+body{
+	margin: 0;
+	padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+	border: 2px solid black;
+	position: relative;
+}
+
+.background_style{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(120deg, rgba(107, 122, 143, 1),rgba(66, 75, 87, 1));
+	z-index: -5;
+}
+
+/* ================== HEADER Section 1 ================== */
+
+.header{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+}
+
+.header_section1 hr,
+.slogan_section3 hr { 
+	width: 20%;
+	margin: auto;
+	margin-bottom: 15px;
+  	border: 2px solid #DCC7AA;
+}
+
+
+.logo{
+	position: relative;
+	width: 11%;
+	margin: auto;
+	object-fit: cover;
+}
+
+.logo img{
+	width: 100%;
+}
+
+h1{
+	color: whitesmoke;
+	text-align: center;
+	margin: auto;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 35px;
+}
+
+/* ================== CAROUSEL Section 2 ================== */
+
+/* === Icon & Bounton Play/Pause en absolute par rapport à class .carousel-container === */
+#prevBtn{
+	z-index: 10;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 3%;
+	font-size: 30px;
+	box-shadow: 2px 2px 2px orange;
+	background-color: #424b57;
+	border-radius: 80px 0px 0px 80px;
+	border: 2px solid #6B7A8F;
+	cursor: pointer;
+}
+
+#prevBtn i{
+	color: white;
+}
+
+
+#prevBtn i:hover{
+	color: #DCC7AA;
+}
+
+#nextBtn{
+	z-index: 10;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 3%;
+	font-size: 30px;
+	box-shadow: -2px 2px 2px orange;
+	background-color: #424b57;
+	border: 2px solid #6B7A8F;
+    border-radius: 0px 80px 80px 0px;
+	cursor: pointer;
+}
+
+#nextBtn i{
+	color: white;
+}
+
+
+#nextBtn i:hover{
+	color: #DCC7AA;
+}
+
+.pauseNavigation{
+    position: absolute;
+    top: 87%;
+    left: 50%;
+	transform: translateX(-50%);
+}
+
+#pauseBtn{
+	box-shadow: 1px 1px 1px 2px orange;
+	color: whitesmoke;
+	background-color: #424b57;
+	border: 2px solid #6B7A8F;
+	cursor: pointer;
+	font-size: 15px;
+	padding: 8px 30px;
+}
+
+#pauseBtn:hover{
+	box-shadow: 1px 1px 1px 2px orange;
+	color: #DCC7AA;
+	background-color: #6B7A8F;
+	border: 2px solid #424b57;
+	cursor: pointer;
+	font-size: 15px;
+	padding: 8px 30px;
+}
+
+/* === Carousel Container  === */
+.carousel_section2{
+	width: 100%;
+    margin: auto;
+}
+
+.carousel_section2 h2{
+	display: none;
+}
+
+.carousel-container{
+	max-width: 690px;
+	height: 393px;
+	margin: auto;
+	overflow: hidden;
+	border : 2px black solid;
+	position: relative;
+}
+
+
+.carousel-container p{
+	margin-top: 8px;
+	font-style: italic;
+}
+
+.carousel-slide{
+	display: flex;
+	width: 701px;
+	height: 393px;
+	position: absolute;
+}
+
+/* === Carousel Figure & Figcaption  === */
+
+.carousel-slide figure{
+	max-width: 100%;
+	display: block;
+	height: auto;
+	margin: initial;
+	position: relative;
+}
+
+.carousel-slide figure img{
+	max-width: 701px;
+	height: 393px;
+}
+
+.carousel-slide figcaption{
+	position: absolute;
+	top: 20%;
+	left: 40%;
+}
+
+#screenMarker, #screenNom, #screenSignature, #screenReserver, #screenReservation{
+	border: 2px solid #424b57;
+}
+
+#screenMarker, #screenSignature{
+	width: 100%;
+	height: 100%;
+}
+
+#screenNom, #screenReserver{
+	width: 70%;
+	height: 70%;
+}
+
+#screenReservation{
+	width: 80%;
+	height: 80%;
+}
+
+/* ================== SLOGAN Section 3 ================== */
+
+.slogan_section3{
+	display: flex;
+    justify-content: center;
+    flex-direction: column;
+	width: 100%;
+	margin-top: 15px;
+}
+
+.mapicon_slogan {
+	margin: auto;
+	margin-top: 8px;
+	font-size: 23px;
+	color: #DCC7AA;
+}
+
+.slogan_section3{
+	margin: auto;
+	color: whitesmoke;
+	text-align: center;
+	font-family: 'Noto Sans KR', sans-serif;
+	margin-top: 10px;
+}
+
+.slogan h2,
+#instruction{
+	font-size: medium;
+	font-weight:300;
+	margin-top:3px;
+	margin-bottom: 5px;
+	font-size: 20px;
+	font-style: italic;
+}
+
+
+
+.arrowDown_slogan{
+	margin: auto ;
+	text-align: center;
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+.arrowDown_slogan a {
+	margin: auto ;
+	text-align: center;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	font-size: 40px;
+	color: #DCC7AA;
+}
+
+.arrowDown_slogan a:hover{
+	color: white;
+}
+
+/* ================== Carte & Bloc Réservation - Section 4 ================== */
+
+.section4{
+	margin: 5px 35px ;
+	display: flex;
+	justify-content: center;
+	/* Passe en space-around dans Reservation.js lors du click sur un Icon d'une station*/
+}
+
+.section4 h3{
+	display: none;
+}
+
+#map_container{
+	height: 500px;
+	width: 63%;
+	border: 4px solid #DCC7AA;
+}
+
+#map_container:hover{
+	border: 4px solid rgb(216, 173, 112);
+}
+
+#station_detail_container{
+	display: none;
+	background-color: #DCC7AA;
+	height: 500px;
+    width: 360px;
+	border: 4px solid white;
+	border-radius: 10px 10px 10px 10px;
+	position: relative;
+}
+
+#station_detail_container:hover{
+	background-color: rgb(233, 218, 198);
+	border: 4px solid rgb(216, 173, 112);
+}
+
+#adress, #textAvailableBikeStands, #textAvailableBikes{
+	margin-left: 30px;
+}
+
+#signature{
+	position: absolute;
+	top: 54%;
+	left: 22%;
+	margin: 0px;
+	font-style: italic;
+	font-size: small;
+	text-decoration: underline;
+}
+
+#titre_station_detail{
+	margin: 30px;
+	font-size: 25px;
+	text-decoration: underline;
+	font-style: italic;
+	text-align: center;
+}
+
+#adress{
+	margin-top: 40px;
+}
+
+
+#textAvailableBikeStands{
+	margin-bottom: 0px;
+}
+
+#textAvailableBikes{
+	margin-top: 0px;
+}
+
+
+#formulaire{
+	position: absolute;
+    top: 45%;
+    transform: translateY(-55%);
+	left: 16%;
+}
+
+#inputName{
+	margin-left: 22px;
+	margin-bottom: 8px;
+}
+
+#submit{
+	position: absolute;
+	top: 243px;
+	left: 30%;
+	box-shadow: 1px 1px 1px 2px black;
+	color: whitesmoke;
+	background-color: #424b57;
+	border: 2px solid #6B7A8F;
+	cursor: pointer;
+	font-size: 15px;
+	padding: 8px 30px;
+}
+
+#submit:hover{
+	background-color: #6B7A8F;
+	border: 2px solid #424b57;
+}
+
+/* ================== Information de Réservation & Timer  - Section 5 ================== */
+
+.section5{
+	margin: 20px 35px;
+	display: flex;
+	justify-content: space-around;
+}
+
+.section5 h4{
+	display: none;
+}
+
+#inforesa_container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #DCC7AA;
+	height: 96px;
+	padding-top: 30px ;
+	width: 85%;
+	border: 4px solid white;
+	border-radius: 10px 10px 10px 10px;
+	display: none;
+}
+
+#inforesa_container hr{
+	width: 20%;
+	border: 1px solid rgb(216, 173, 112);
+	margin-bottom: 9px;
+}
+
+#inforesa_container p{
+	margin: 5px;
+	text-align: center;
+}
+
+#inforesa_container:hover{
+	background-color: rgb(233, 218, 198);
+	border: 4px solid rgb(216, 173, 112);
+}
+
+#logo_inforesa {
+	display: flex;
+	align-items: center;
+	width: 10%;
+	margin: auto;
+	margin-left: auto;
+}
+
+#logo_inforesa img{
+	width: 100%;
+}
+
+/* === Canvas   === */
+#containerCanvas{
+	background-color: white;
+    border: 2px solid gray;
+    width: 270px;
+    height: 130px;
+    position: absolute;
+    top: 57%;
+    left: 12%;
+}
+
+#canvas{
+	width: 270px;
+	height: 130px;
+}
+
+
+/* RESPONSIVE DESIGN ==========================================================================  */
+
+/*  Max Width 1150px - Responsive Form ================================================= */
+@media (max-width: 1150px) {
+
+	.section4 {
+		justify-content: space-evenly;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#station_detail_container{
+		margin-top: 18px;
+		width: 650px;
+		text-align: center;
+	}
+
+	#map_container{
+		width: 650px;
+	}
+
+	#containerCanvas{
+		left: 29%;
+	}
+
+	#signature{
+		left: 29%;
+	}
+
+	#formulaire{
+		left: 32%;
+	}
+
+	.section5{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#inforesa_container{
+		width: 650px;
+		height: 108px;
+	}
+}
+
+/* Max Width 723px - Responsive Carousel & Form ================================================= */
+@media (max-width: 723px) {
+
+	/* === Responsive Carousel === */
+	.carousel-container {
+		max-width: 440px;
+		height: 247px;
+	}
+	
+	.carousel-slide {
+		transform: translateX(-440px);
+		width: 440px;
+		height: 247px;
+	}
+
+	.carousel-slide figure img {
+		max-width: 440px;
+		height: 247px;
+	}
+	.carousel-slide figcaption {
+		width: 41%;
+	}
+
+	.pauseNavigation {
+		top: 85%;
+	}
+
+	#pauseBtn, #pauseBtn:hover {
+		font-size: small;
+		padding: 4px 10px;
+	}
+
+	#nextBtn, #prevBtn{
+		font-size: 22px;
+	}
+	
+
+	/* === Responsive Map & Form === */
+	#station_detail_container{
+		width: 425px;
+		text-align: center;
+		margin-top: 18px;
+	}
+
+	#map_container{
+		width: 425px;
+	}
+
+	#inforesa_container{
+		width: 425px;
+		height: 106px;
+	}
+
+	#adress, #textAvailableBikeStands, #textAvailableBikes {
+		margin: 10px;
+	}
+
+	#formulaire {
+		left: 23%;
+	}
+
+	#containerCanvas{
+		left: 19%;
+	}
+
+	.section5{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#inforesa_container{
+		width: 425px;
+		font-size: small;
+	}
+
+	#logo_inforesa {
+		width: 30%;
+	}
+}
+
+/*  Max Width 465px - Responsive Carousel & Form ================================================= */
+@media (max-width: 465px) {
+
+	/* === Header Responsive === */
+	.logo{
+		width: 30%;
+	}
+
+	h1 {
+		width: 85%;
+	}
+	
+	/* === Carousel Responsive === */
+	.carousel-container p{
+		font-size: small;
+		margin-bottom: 1px;
+	}
+
+	.carousel-container {
+		max-width: 300px;
+		height: 169px;
+	}
+	
+	.carousel-slide {
+		transform: translateX(-300px);
+		width: 300px;
+		height: 169px;
+	}
+
+	.carousel-slide figure img {
+		max-width: 300px;
+		height: 169px;
+	}
+
+	.carousel-slide figcaption {
+		width: 59%;
+		top: 15%;
+		left: 35%;
+	}
+
+	#screenMarker, #screenSignature {
+		width: 50%;
+		height: 50%;
+	}
+
+	.pauseNavigation {
+		top: 80%;
+	}
+
+	#pauseBtn, 	#pauseBtn:hover {
+		font-size: small;
+		padding: 2px 9px;
+	}
+
+	#nextBtn, #prevBtn{
+		font-size: 17px;
+	}
+
+	/* === Responsive Map & Form === */
+	#station_detail_container{
+		width: 300px;
+		text-align: center;
+		margin-top: 18px;
+	}
+
+	#map_container{
+		width: 300px;
+	}
+
+	#inforesa_container{
+		width: 300px;
+	}
+
+	#adress, #textAvailableBikeStands, #textAvailableBikes{
+		margin: 10px;
+	}
+
+	#formulaire {
+		left: 11%;
+	}
+
+	#containerCanvas{
+		left: 15px;
+	}
+
+	.section5{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#inforesa_container{
+		width: 300px;
+		height: 120px;
+		padding-top: 10px;
+	}
+
+	#inforesa_container p {
+		margin: 2px 22px 2px 22px;
+	}
+
+	#logo_inforesa {
+		width: 40%;
+	}
+
+
+}
